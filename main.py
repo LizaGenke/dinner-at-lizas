@@ -1,3 +1,5 @@
+import random
+
 class Ingredient:
     def __init__(self, name):
         self.name = name
@@ -52,5 +54,7 @@ for line in f_meals:
 
 meals_list.append(Meal(current_meal_name, current_meal_contents))
 
-for meal in meals_list:
+random.shuffle(meals_list)
+
+for meal in meals_list[:7]:
     print(meal.describe())
